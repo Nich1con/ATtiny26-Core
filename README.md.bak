@@ -34,7 +34,7 @@
 - **shiftOut(dataPin, clkPin, order, data)**
 - **shiftIn(dataPin, clkPin, order)**
 
-**pin** передавать в виде числа **0...14** или в формате **PIN_PA0**,**PIN_PB3** и т.д.
+**pin** передавать в виде числа **0...14** или в формате **PIN_PA0**, **PIN_PB3** и т.д.
 
 ### Аналоговые wiring-функции:
 - **analogRead(pin)**
@@ -53,5 +53,9 @@
 - **attachInterrupt(0, func, mode)**
 - **detachInterrupt(0)**
 
-
+### Так же доступны :
 - **random(), map()** и другие математические функции и макросы Arduino
+
+## Встроенные библиотеки (см. примеры в Arduino IDE)
+- **EEPROM**
+- **SoftwareUart**
