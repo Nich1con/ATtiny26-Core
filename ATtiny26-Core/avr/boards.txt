@@ -1,0 +1,99 @@
+#  ATtiny26-Core это Arduino-ядро для работы с недорогим микроконтроллером ATtiny26/ATtiny26L.
+#  Это бесплатное ядро, подразумевает свободное использование и модификацию.
+#  Просьба ссылаться на первоисточник - github.com/Nich1con/ATtiny26-Core
+#  
+#  ATtiny26-Core is an Arduino core for working with an inexpensive ATtiny26/ATtiny26L microcontroller.
+#  This is a free core, implies free use and modification.
+#  Please refer to the original source - github.com/Nich1con/ATtiny26-Core
+
+
+menu.clk=Clock
+menu.bod=BOD
+menu.ee=EEPROM
+menu.millis=millis()/micros()
+menu.pwm=analogWrite()
+menu.adc=analogRead()
+menu.compiler_version=Compiler
+
+
+t26.name=ATtiny26
+t26.bootloader.tool=avrdude
+t26.upload.tool=avrdude
+t26.upload.using=avrdude
+t26.bootloader.unlock_bits=0x03
+t26.bootloader.lock_bits=0x03
+t26.build.core=ATtiny26-Core
+t26.build.board=attiny
+t26.build.extra_flags={extra_flags.millis} {extra_flags.pwm} {extra_flags.adc}
+t26.upload.maximum_size=2048
+t26.upload.maximum_data_size=128
+t26.build.mcu_compile=attiny26
+t26.build.mcu=attiny26
+t26.build.variant=attiny26
+
+t26.compiler.c.extra_flags=-Wextra -flto -g
+t26.compiler.c.elf.extra_flags=-w -flto -g
+t26.compiler.cpp.extra_flags=-Wextra -flto -g
+t26.compiler.flag_indicator=
+t26.ltoarcmd=avr-gcc-ar
+
+t26.menu.compiler_version.gcc=Embedded GCC
+t26.menu.compiler_version.gcc.compiler.path={runtime.tools.avr-gcc.path}/bin/
+t26.menu.compiler_version.gcc8=GCC v8.3.0
+t26.menu.compiler_version.gcc8.compiler.path={runtime.platform.path}/tools/avr-gcc/bin/
+
+t26.menu.clk.16M=Internal 16MHz (PLL)
+t26.menu.clk.16M.bootloader.low_fuses=0x51
+t26.menu.clk.16M.build.f_cpu=16000000L
+t26.menu.clk.8M=Internal 8MHz
+t26.menu.clk.8M.bootloader.low_fuses=0xC4
+t26.menu.clk.8M.build.f_cpu=8000000L
+t26.menu.clk.4M=Internal 4MHz
+t26.menu.clk.4M.bootloader.low_fuses=0xC3
+t26.menu.clk.4M.build.f_cpu=4000000L
+t26.menu.clk.2M=Internal 2MHz
+t26.menu.clk.2M.bootloader.low_fuses=0xC2
+t26.menu.clk.2M.build.f_cpu=2000000L
+t26.menu.clk.1M=Internal 1MHz
+t26.menu.clk.1M.bootloader.low_fuses=0xC1
+t26.menu.clk.1M.build.f_cpu=1000000L
+t26.menu.clk.E16M=External crystal 16MHz
+t26.menu.clk.E16M.bootloader.low_fuses=0xFE
+t26.menu.clk.E16M.build.f_cpu=16000000L
+t26.menu.clk.E8M=External crystal 8MHz
+t26.menu.clk.E8M.bootloader.low_fuses=0xFE
+t26.menu.clk.E8M.build.f_cpu=8000000L
+t26.menu.clk.E1M=External crystal 1MHz
+t26.menu.clk.E1M.bootloader.low_fuses=0xFC
+t26.menu.clk.E1M.build.f_cpu=1000000L
+
+t26.menu.ee.save=Retain
+t26.menu.ee.save.bootloader.eesave_bit=0
+t26.menu.ee.erase=Erase
+t26.menu.ee.erase.bootloader.eesave_bit=1
+
+t26.menu.bod.2V7=2.7V
+t26.menu.bod.2V7.bootloader.high_fuses=0b11110{bootloader.eesave_bit}10
+t26.menu.bod.4V=4.0V
+t26.menu.bod.4V.bootloader.high_fuses=0b11110{bootloader.eesave_bit}00
+t26.menu.bod.OFF=Disable
+t26.menu.bod.OFF.bootloader.high_fuses=0b11110{bootloader.eesave_bit}01
+
+t26.menu.millis.millis_en=Enable
+t26.menu.millis.millis_en.extra_flags.millis=-D_T26CORE_MILLIS
+t26.menu.millis.millis_dis=Disable
+t26.menu.millis.millis_dis.extra_flags.millis=
+
+t26.menu.pwm.pwm_en=Enable 
+t26.menu.pwm.pwm_en.extra_flags.pwm=-D_T26CORE_PWM
+t26.menu.pwm.pwm_fast=Fast mode
+t26.menu.pwm.pwm_fast.extra_flags.pwm=-D_T26CORE_PWMFAST
+t26.menu.pwm.pwm_dis=Disable
+t26.menu.pwm.pwm_dis.extra_flags.pwm=
+
+t26.menu.adc.adc_en=Enable
+t26.menu.adc.adc_en.extra_flags.adc=-D_T26CORE_ADC
+t26.menu.adc.adc_fast=Fast mode
+t26.menu.adc.adc_fast.extra_flags.adc=-D_T26CORE_ADCFAST
+t26.menu.adc.adc_dis=Disable
+t26.menu.adc.adc_dis.extra_flags.adc=
