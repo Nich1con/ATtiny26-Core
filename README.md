@@ -20,10 +20,29 @@
 - Готово!
 
 ### Ручная
-- Папку ATtiny26-Core из этого репозитория положить по пути C:\Users\Username\Documents\Arduino\hardware 
+- Папку ATtiny26-Core положить по пути C:\Users\Username\Documents\Arduino\hardware 
 - Если папка hardware отсутствуют - необходимо создать ее.
 
 ## Раписновка ATtiny26 и доступные wiring-функции
-### Используя данное ядро придерживайтесь приведенной распиновки:
+### Используя данное ядро придерживайтесь этой распиновки:
 ![CORE_PINOUT](https://github.com/Nich1con/ATtiny26-Core/blob/main/ATtiny26-pinout.png)
+### В ядре реализованы следующие wiring-функции:
+- **pinMode(pin, mode)**
+- **digitalRead(pin)**
+- **digitalWrite(pin, state)**
+- **analogRead(pin)**
+- **analogWrite(pin, state)**
+- **analogReference(reference)**
+- **analogPrescaler(prescaler)**
 
+- **millis()**
+- **micros()**
+- **delay(ms)**
+- **delayMicroseconds(us)**
+
+- **attachInterrupt()**
+- **detachInterrupt()**
+- **shiftOut()**
+- **shiftIn()**
+
+- **random(), map() ** и другие математические функции и макросы Arduino
