@@ -26,14 +26,20 @@
 ## Раписновка ATtiny26 и доступные wiring-функции
 ### Используя данное ядро придерживайтесь этой распиновки:
 ![CORE_PINOUT](https://github.com/Nich1con/ATtiny26-Core/blob/main/ATtiny26-pinout.png)
-### В ядре реализованы следующие wiring-функции:
-- **pinMode(pin, mode)**
+### Цифровые wiring-функции:
+- **pinMode(pin, mode)**  	 	
 - **digitalRead(pin)**
 - **digitalWrite(pin, state)**
+- **analogWrite(pin, duty)**
+- **shiftOut(dataPin, clkPin, order, data)**
+- **shiftIn(dataPin, clkPin, order)**
+**pin** передавать в виде числа 0...14 или в формате PIN_PA0, PIN_PB5 и т.д.
+### Аналоговые wiring-функции:
 - **analogRead(pin)**
-- **analogWrite(pin, state)**
 - **analogReference(reference)**
 - **analogPrescaler(prescaler)**
+**pin** передавать только в формате A0...A9
+**reference** доступны **DEFAULT**, **EXTERNAL**, **INTERNAL**
 
 - **millis()**
 - **micros()**
@@ -42,5 +48,6 @@
 
 - **attachInterrupt()**
 - **detachInterrupt()**
-- **shiftOut()**
-- **shiftIn()**
+
+
+- **random(), map()** и другие математические функции и макросы Arduino
