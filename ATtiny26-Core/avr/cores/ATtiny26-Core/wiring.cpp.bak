@@ -142,7 +142,6 @@ void analogWrite(uint8_t pin, uint8_t val) {
 #endif
 	
 /* Функции для работы с АЦП */
-#if (defined(_T26CORE_ADC) || defined (_T26CORE_ADCFAST))
 void analogPrescaler(uint8_t presc){
 	ADCSR = (ADCSR & 0xF8) | presc;
 }
@@ -157,7 +156,6 @@ int16_t analogRead(uint8_t pin){
 	while(ADCSR & (1 << ADSC));
 	return ADC;
 }
-#endif
 
 /* Функции shiftOut и shiftIn - программный SPI */
 void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val) {
