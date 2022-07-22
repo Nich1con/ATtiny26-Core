@@ -197,7 +197,6 @@ void setup(void);
 void loop(void);
 
 /* Функции для работы с GPIO */
-void analogWriteMode(uint8_t mode);
 void analogPrescaler(uint8_t presc);
 void pinMode(uint8_t pin, uint8_t mode);
 void digitalWrite(uint8_t pin, uint8_t state);
