@@ -34,18 +34,14 @@
 - **shiftOut(dataPin, clkPin, order, data)**
 - **shiftIn(dataPin, clkPin, order)**
 
-**pin** передавать в виде числа 0...14 или в формате PIN_PA0, PIN_PB5 и т.д.
+**pin** передавать в виде числа **0...14** или в формате **PIN_PA0**,**PIN_PB3** и т.д.
 
 ### Аналоговые wiring-функции:
 - **analogRead(pin)**
 - **analogReference(reference)**
 - **analogPrescaler(prescaler)**
 
-**pin** передавать только в формате A0...A9
-
-**reference** доступны **DEFAULT**, **EXTERNAL**, **INTERNAL**
-
-**prescaler** влияет на скорость АЦП, доступны **ADC_PRESCALER_128**...**ADC_PRESCALER_2**, не рекомендуется снижать делитель ниже /32
+**pin** передавать только в формате **A0...A9**
 
 ### wiring-функции времени:
 - **millis()**
@@ -53,8 +49,9 @@
 - **delay(ms)**
 - **delayMicroseconds(us)**
 
-- **attachInterrupt()**
-- **detachInterrupt()**
+### wiring-функции внешнего прерывания:
+- **attachInterrupt(0, func, mode)**
+- **detachInterrupt(0)**
 
-
+### Так же доступны :
 - **random(), map()** и другие математические функции и макросы Arduino
