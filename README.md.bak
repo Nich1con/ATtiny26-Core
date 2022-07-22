@@ -41,6 +41,7 @@
 **pin** передавать только в формате A0...A9
 **reference** доступны **DEFAULT**, **EXTERNAL**, **INTERNAL**
 
+
 - **millis()**
 - **micros()**
 - **delay(ms)**

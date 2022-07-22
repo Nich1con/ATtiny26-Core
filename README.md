@@ -33,11 +33,13 @@
 - **analogWrite(pin, duty)**
 - **shiftOut(dataPin, clkPin, order, data)**
 - **shiftIn(dataPin, clkPin, order)**
+
 **pin** передавать в виде числа 0...14 или в формате PIN_PA0, PIN_PB5 и т.д.
 ### Аналоговые wiring-функции:
 - **analogRead(pin)**
 - **analogReference(reference)**
 - **analogPrescaler(prescaler)**
+
 **pin** передавать только в формате A0...A9
 **reference** доступны **DEFAULT**, **EXTERNAL**, **INTERNAL**
 
