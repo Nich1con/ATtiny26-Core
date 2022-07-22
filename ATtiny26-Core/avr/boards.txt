@@ -13,7 +13,6 @@ menu.ee=EEPROM
 menu.millis=millis()/micros()
 menu.pwm=analogWrite()
 menu.adc=analogRead()
-menu.compiler_version=Compiler
 
 
 t26.name=ATtiny26
@@ -36,11 +35,6 @@ t26.compiler.c.elf.extra_flags=-w -flto -g
 t26.compiler.cpp.extra_flags=-Wextra -flto -g
 t26.compiler.flag_indicator=
 t26.ltoarcmd=avr-gcc-ar
-
-t26.menu.compiler_version.gcc=Embedded GCC
-t26.menu.compiler_version.gcc.compiler.path={runtime.tools.avr-gcc.path}/bin/
-t26.menu.compiler_version.gcc8=GCC v8.3.0
-t26.menu.compiler_version.gcc8.compiler.path={runtime.platform.path}/tools/avr-gcc/bin/
 
 t26.menu.clk.16M=Internal 16MHz (PLL)
 t26.menu.clk.16M.bootloader.low_fuses=0x51
