@@ -35,23 +35,23 @@
 - **shiftIn(dataPin, clkPin, order)**
 
 **pin** передавать в виде числа **0...14** или в формате **PIN_PA0**, **PIN_PB3** и т.д.
-
+---
 ### Аналоговые wiring-функции:
 - **analogRead(pin)**
 - **analogReference(reference)**
 
 **pin** передавать только в формате **A0...A9**
-
+---
 ### wiring-функции времени:
 - **millis()**
 - **micros()**
 - **delay(ms)**
 - **delayMicroseconds(us)**
-
+---
 ### wiring-функции внешнего прерывания:
 - **attachInterrupt(0, func, mode)**
 - **detachInterrupt(0)**
-
+---
 ### Так же доступны :
 - **random(), map()** и другие математические функции и макросы Arduino
 
