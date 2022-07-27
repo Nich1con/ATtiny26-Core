@@ -1,20 +1,17 @@
 #######################################
-# Syntax Coloring Map For SPI
+# Syntax Coloring Map For SoftwareUart
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-SPI	KEYWORD1
+SoftwareUart	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-end	KEYWORD2
-transfer	KEYWORD2
-setDataMode	KEYWORD2
-begin	KEYWORD2
+printStr	KEYWORD2
+printInt	KEYWORD2
+write	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
-SPI_MODE0	LITERAL1
-SPI_MODE1	LITERAL1
