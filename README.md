@@ -23,9 +23,13 @@
 - Папку ATtiny26-Core положить по пути C:\Users\Username\Documents\Arduino\hardware 
 - Если папка hardware отсутствуют - необходимо создать ее.
 
+## Прошивка ATtiny26 при помощи программатора
+### Рекомендуется использовать программатор UsbAsp / USBtinyISP:
+![CORE_PROG](https://github.com/Nich1con/ATtiny26-Core/blob/main/doc/programming.png)
+
 ## Раписновка ATtiny26 и доступные wiring-функции
 ### Используя данное ядро придерживайтесь этой распиновки:
-![CORE_PINOUT](https://github.com/Nich1con/ATtiny26-Core/blob/main/ATtiny26-pinout.png)
+![CORE_PINOUT](https://github.com/Nich1con/ATtiny26-Core/blob/main/doc/ATtiny26-pinout.png)
 ### Цифровые wiring-функции:
 - **pinMode(pin, mode)**  	 	
 - **digitalRead(pin)**
@@ -86,3 +90,6 @@
 - **EEPROM**
 - **SoftwareUart**
 - **SPI**
+
+![CORE_SPI](https://github.com/Nich1con/ATtiny26-Core/blob/main/doc/SPI.png)
+![CORE_SU](https://github.com/Nich1con/ATtiny26-Core/blob/main/doc/SoftUart.png)
