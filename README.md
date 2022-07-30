@@ -24,7 +24,7 @@
 - Если папка hardware отсутствуют - необходимо создать ее.
 
 ## Прошивка ATtiny26 при помощи программатора
-### Рекомендуется использовать программатор UsbAsp / USBtinyISP:
+### Рекомендуется использовать программатор UsbASP / USBtinyISP:
 ![CORE_PROG](https://github.com/Nich1con/ATtiny26-Core/blob/main/doc/programming.png)
 
 ## Раписновка ATtiny26 и доступные wiring-функции
