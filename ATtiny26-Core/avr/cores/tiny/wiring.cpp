@@ -10,12 +10,12 @@
    ATtiny26 pinout:		 	 
 	--------------------------------------------------------------------------------
 	[CORE]	  - FUNCTION	      -  GPIO	_______    GPIO - FUNCTION  - [CORE]
-	[D8]      -	MOSI/DI/SDA/~OC1A -  PB0 ->|o	   |<- PA0  - ADC0      - [D0, A0] 		  
+	[D8]      - MOSI/DI/SDA/~OC1A -  PB0 ->|o      |<- PA0  - ADC0      - [D0, A0] 		  
 	[D9]      - MISO/DO/OC1A      -  PB1 ->|       |<- PA1  - ADC1      - [D1, A1]  
 	[D10]     - SCK/SCL/~OC1B     -  PB2 ->|       |<- PA2  - ADC2      - [D2, A2] 	
 	[D11]     - OC1B              -  PB3 ->|       |<- PA3  - AREF      - [D3, AREF] 
-	[VCC]     -	POWER			  -  VCC ->|       |<- GND  - POWER     - [GND] 
-	[GND] 	  -	POWER 			  -  GND ->|       |<- AVCC - POWER     - [VCC] 
+	[VCC]     - POWER	      -  VCC ->|       |<- GND  - POWER     - [GND] 
+	[GND] 	  - POWER 	      -  GND ->|       |<- AVCC - POWER     - [VCC] 
 	[D12, A7] - ADC7/XTAL1        -  PB4 ->|       |<- PA4  - ADC3      - [D4, A3]  
 	[D13, A8] - ADC8/XTAL2        -  PB5 ->|       |<- PA5  - ADC4      - [D5, A4] 
 	[D14, A9] - ADC9/INT0/T0      -  PB6 ->|       |<- PA6  - ADC5/AIN0 - [D6, A5]
