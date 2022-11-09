@@ -105,8 +105,8 @@ void digitalWrite(uint8_t pin, uint8_t state){
 }
 
 uint8_t digitalRead(uint8_t pin){
-	if(pin > 7) return bitRead(PORTB, pin - 8);
-	return bitRead(PORTA, pin);	
+	if(pin > 7) return bitRead(PINB, pin - 8);
+	return bitRead(PINA, pin);	
 }
 
 /* Функции генерации ШИМ  */
