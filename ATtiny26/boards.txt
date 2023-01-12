@@ -67,11 +67,11 @@ t26.menu.ee.erase=Erase
 t26.menu.ee.erase.bootloader.eesave_bit=1
 
 t26.menu.bod.2V7=2.7V
-t26.menu.bod.2V7.bootloader.high_fuses=0b11110{bootloader.eesave_bit}10
+t26.menu.bod.2V7.bootloader.high_fuses=0b00010{bootloader.eesave_bit}10
 t26.menu.bod.4V=4.0V
-t26.menu.bod.4V.bootloader.high_fuses=0b11110{bootloader.eesave_bit}00
+t26.menu.bod.4V.bootloader.high_fuses=0b00010{bootloader.eesave_bit}00
 t26.menu.bod.OFF=Disable
-t26.menu.bod.OFF.bootloader.high_fuses=0b11110{bootloader.eesave_bit}01
+t26.menu.bod.OFF.bootloader.high_fuses=0b00010{bootloader.eesave_bit}01
 
 t26.menu.millis.millis_en=Enable
 t26.menu.millis.millis_en.extra_flags.millis=-D_T26CORE_MILLIS
