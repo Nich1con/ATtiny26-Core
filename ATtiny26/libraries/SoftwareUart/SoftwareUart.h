@@ -35,8 +35,10 @@ template <uint8_t PIN> class SoftwareUart {
     }
 
     void printStr(char *str) {
-      for (uint8_t i = 0; str[i] != '\0'; i++) {
-        write(str[i]);
+      char* p = &str[0];
+      while (*p != '\0') {
+        write(*p);
+        ++p;
       }
     }
 
