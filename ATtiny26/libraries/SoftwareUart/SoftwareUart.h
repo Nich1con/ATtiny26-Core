@@ -43,21 +43,8 @@ template <uint8_t PIN> class SoftwareUart {
     }
 
     void printInt(int data) {
-      uint8_t chars[10], len;
-      if (data < 0) {
-        write('-');
-        data = -data;
-      }
-      for (uint8_t i = 0; i < 10; i++) {
-        chars[i] = data % 10;
-        data /= 10;
-        if (data == 0) {
-          len = i;
-          break;
-        }
-      }
-      for (int8_t i = len; i >= 0; i--) {
-        write(chars[i] + '0');
-      }
+      char intBuffer[7];  //for integers, that is seven characters (five digits, a possible minus sign, and a terminating 0)
+      itoa(data, intBuffer, 10);
+      printStr(intBuffer);
     }
 };
