@@ -139,9 +139,9 @@
 #define digitalPinToBitMask(p)   	(p < 8 ? (1 << p) : (1 << (p - 7)))
 #define digitalPinToTimer(p)     	(((p) == 9) ? TIMER1A : (((p) == 11) ? TIMER1B : (NOT_ON_TIMER)))
 #define analogInPinToBit(p)      	(analogInputToDigitalPin(p) < 8 ? analogInputToDigitalPin(p) : analogInputToDigitalPin(p) - 7)
-#define portOutputRegister(p)    	(p == 1 ? &PORTA : &PORTB)
-#define portInputRegister(p)     	(p == 1 ? &PINA : &PINB)
-#define portModeRegister(p)      	(p == 1 ? &DDRA : &DDRB)
+#define portOutputRegister(p)    	((uint8_t*)(p == 1 ? &PORTA : &PORTB))
+#define portInputRegister(p)     	((uint8_t*)(p == 1 ? &PINA : &PINB))
+#define portModeRegister(p)      	((uint8_t*)(p == 1 ? &DDRA : &DDRB))
 
 /* Определения аналоговых пинов A0-A9 */
 #define A0 0
@@ -268,11 +268,7 @@ void detachInterrupt(uint8_t interruptNum);
 #define round(x)     ({ typeof (x) _x = (x); _x >= 0 ? (long)(_x + 0.5) : (long)(_x - 0.5); })
 #define radians(deg) ((deg) * DEG_TO_RAD)
 #define degrees(rad) ((rad) * RAD_TO_DEG)
-#define constrain(x,low,high)    ({ \
-    typeof (x) _x = (x);              \
-    typeof (low) _l = (low);          \
-    typeof (high) _h = (high);        \
-    _x < _l ? _l : _x > _h ? _h :_x; })
+#define constrain(x, l, h) (x < l ? l : x > h ? h :x)
 #define interrupts() sei()
 #define noInterrupts() cli()
 #define clockCyclesPerMicrosecond()  ( F_CPU / 1000000L )

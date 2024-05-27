@@ -113,8 +113,8 @@ uint8_t digitalRead(uint8_t pin){
 #if (defined(_T26CORE_PWM) || defined (_T26CORE_PWMFAST))
 void analogWriteDisable(uint8_t pin) {
   switch (pin) {
-    case 9: bitClear(TCCR1A, COM1A1);
-    case 11: bitClear(TCCR1A, COM1B1);
+    case 9: bitClear(TCCR1A, COM1A1);	break;
+    case 11: bitClear(TCCR1A, COM1B1);	break;
   }
 }
 
